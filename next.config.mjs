@@ -15,6 +15,15 @@ const config = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/docs/introduction',
+        permanent: false,
+      },
+    ];
+  },
   async rewrites() {
     return [
       {

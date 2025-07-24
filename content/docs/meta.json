@@ -1,3 +1,7 @@
 {
-  "pages": ["documentation"]
+  "root": true,
+  "title": "Introduction",
+  "description": "Product Documentation Template",
+  "icon": "Building",
+  "pages": ["---Guide---", "introduction", "..."]
 }
