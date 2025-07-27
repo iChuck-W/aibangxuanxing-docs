@@ -32,7 +32,7 @@ export default async function Page(props: {
         <LLMCopyButton markdownUrl={`${page.url}.mdx`} />
         <ViewOptions
           markdownUrl={`${page.url}.mdx`}
-          githubUrl={`https://github.com/iChuck-W/chuck-aichatbot-digital-procurement-docs/blob/dev/content/docs/${page.path}`}
+          githubUrl={`https://github.com/iChuck-W/aibangxuanxing-docs/blob/main/content/docs/${page.path}`}
         />
       </div>
       <DocsDescription>{page.data.description}</DocsDescription>
