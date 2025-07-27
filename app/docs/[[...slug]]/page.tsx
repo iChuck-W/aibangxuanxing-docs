@@ -8,6 +8,7 @@ import {
 import { notFound } from 'next/navigation';
 import { createRelativeLink } from 'fumadocs-ui/mdx';
 import { getMDXComponents } from '@/components/mdx-components';
+import { LLMCopyButton, ViewOptions } from '@/components/page-actions';
 
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
@@ -27,6 +28,13 @@ export default async function Page(props: {
       }}
     >
       <DocsTitle>{page.data.title}</DocsTitle>
+      <div className="flex flex-row gap-2 items-center border-b pt-2 pb-6">
+        <LLMCopyButton markdownUrl={`${page.url}.mdx`} />
+        <ViewOptions
+          markdownUrl={`${page.url}.mdx`}
+          githubUrl={`https://github.com/iChuck-W/chuck-aichatbot-digital-procurement-docs/blob/dev/content/docs/${page.path}`}
+        />
+      </div>
       <DocsDescription>{page.data.description}</DocsDescription>
       <DocsBody>
         <MDXContent
