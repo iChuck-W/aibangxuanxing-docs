@@ -27,7 +27,7 @@ export async function getLLMText(page: Page) {
 
   return `# ${category}: ${page.data.title}
 URL: ${page.url}
-Source: https://github.com/iChuck-W/chuck-aichatbot-digital-procurement-docs/blob/dev/content/docs/${page.path}
+Source: https://github.com/iChuck-W/chuck-aichatbot-digital-procurement-docs/blob/main/content/docs/${page.path}
 
 ${page.data.description}
         
