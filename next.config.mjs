@@ -19,7 +19,7 @@ const config = {
     return [
       {
         source: '/',
-        destination: '/docs/introduction',
+        destination: '/docs/documentation/introduction',
         permanent: false,
       },
     ];
