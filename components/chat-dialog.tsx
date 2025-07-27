@@ -125,9 +125,6 @@ export function ChatDialog({ isOpen, onClose }: ChatDialogProps) {
                 <p className="text-sm text-fd-muted-foreground mb-4 max-w-[200px]">
                   Ask me anything about the documentation
                 </p>
-                <div className="text-xs text-fd-muted-foreground/70">
-                  Type your question below to get started
-                </div>
               </div>
             ) : (
               <div className="space-y-4">
