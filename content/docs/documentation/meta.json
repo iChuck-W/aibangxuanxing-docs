@@ -1,0 +1,7 @@
+{
+  "root": true,
+  "title": "Introduction",
+  "description": "使用方法说明",
+  "icon": "Building",
+  "pages": ["introduction", "..."]
+}

@@ -1,0 +1,14 @@
+{
+  "root": false,
+  "title": "示例",
+  "description": "模型生成文件和给模型解读的文件内容示例",
+  "icon": "Cuboid",
+  "pages": [
+    "---Example---",
+    "example_analysis_content",
+    "example_analysis_product",
+    "---Template---",
+    "template_product_page",
+    "..."
+  ]
+}
