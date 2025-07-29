@@ -13,7 +13,7 @@ import { type LinkItemType } from 'fumadocs-ui/layouts/docs';
 export const linkItems: LinkItemType[] = [
   {
     type: 'icon',
-    url: 'https://github.com/iChuck-W/template-website-docs',
+    url: 'https://github.com/iChuck-W/aibangxuanxing-docs',
     text: 'Github',
     icon: (
       <svg role="img" viewBox="0 0 24 24" fill="currentColor">
