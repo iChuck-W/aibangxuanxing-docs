@@ -1,0 +1,13 @@
+# *
+User-agent: *
+Allow: /
+
+# *
+User-agent: *
+Disallow: /api/
+
+# Host
+Host: https://docs.aibangxuanxing.com
+
+# Sitemaps
+Sitemap: https://docs.aibangxuanxing.com/sitemap.xml
