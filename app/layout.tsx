@@ -8,13 +8,55 @@ const inter = Inter({
   subsets: ['latin'],
 });
 
-// 网站元数据配置，包括图标
+// Base metadata constants
+const siteConfig = {
+  name: '工业品智能专家',
+  title: '产品文档 | 工业品智能专家',
+  description: '工业品智能专家以品牌官网为知识库做检索，提供专业的产品选型指导和技术支持',
+  url: 'https://docs.aibangxuanxing.com',
+  ogImage: '/favicon.svg',
+  keywords: ['工业品', '智能选型', 'AI助手', '产品文档', '技术支持'],
+};
+
+// Website metadata configuration, including SEO optimization
 export const metadata: Metadata = {
   title: {
-    template: '%s | 工业品智能专家',
-    default: '工业品智能专家',
+    template: `%s | ${siteConfig.name}`,
+    default: siteConfig.title,
   },
-  description: '工业品智能专家以品牌官网为知识库做检索',
+  description: siteConfig.description,
+  keywords: siteConfig.keywords,
+  metadataBase: new URL(siteConfig.url),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'zh_CN',
+    url: siteConfig.url,
+    title: siteConfig.title,
+    description: siteConfig.description,
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: siteConfig.title,
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   icons: {
     icon: [
       {
