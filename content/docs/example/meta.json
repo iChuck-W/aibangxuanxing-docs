@@ -6,9 +6,9 @@
   "pages": [
     "---Example---",
     "example_analysis_content",
-    "example_analysis_product",
-    "---Template---",
-    "template_product_page",
+    "example_product_page",
+    "---Material---",
+    "material_mdx",
     "..."
   ]
 }

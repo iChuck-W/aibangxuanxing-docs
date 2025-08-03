@@ -3,6 +3,8 @@ import type { MDXComponents } from 'mdx/types';
 import { ImageZoom } from 'fumadocs-ui/components/image-zoom';
 import { Mermaid } from '@/components/mermaid';
 import { LLMCopyButton } from '@/components/page-actions';
+import * as TabsComponents from 'fumadocs-ui/components/tabs';
+import { CodeBlock, Pre } from 'fumadocs-ui/components/codeblock';
 
 // use this function to get MDX components, you will need it for rendering MDX
 export function getMDXComponents(components?: MDXComponents): MDXComponents {
@@ -11,6 +13,12 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
     Mermaid,
     LLMCopyButton,
     ...components,
+    ...TabsComponents,
+    pre: ({ ref: _ref, ...props }) => (
+      <CodeBlock {...props}>
+        <Pre>{props.children}</Pre>
+      </CodeBlock>
+    ),
     img: (props) => {
       if (props.src?.startsWith('http')) {
         return <img {...props} />;

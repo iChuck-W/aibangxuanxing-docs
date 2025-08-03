@@ -18,9 +18,6 @@ export function LLMCopyButton({
    * A URL to fetch the raw Markdown/MDX content of page
    */
   markdownUrl,
-  /**
-   * 直接提供 Markdown 内容
-   */
   markdownContent,
 }: {
   markdownUrl?: string;
@@ -28,12 +25,9 @@ export function LLMCopyButton({
 }) {
   const [isLoading, setLoading] = useState(false);
   const [checked, onClick] = useCopyButton(async () => {
-    // 如果直接提供了 Markdown 内容，优先使用它
     if (markdownContent) {
       return navigator.clipboard.writeText(markdownContent);
     }
-
-    // 如果没有 URL，直接返回
     if (!markdownUrl) return;
 
     const cached = cache.get(markdownUrl);
@@ -42,7 +36,6 @@ export function LLMCopyButton({
     setLoading(true);
 
     try {
-      // 获取 Markdown 内容并复制
       const response = await fetch(markdownUrl, {
         headers: {
           Accept: 'text/markdown, text/plain',
@@ -60,16 +53,13 @@ export function LLMCopyButton({
 
       const content = await response.text();
 
-      // 检查内容是否是 HTML
       if (content.includes('<!DOCTYPE') || content.includes('<html')) {
         console.error('Received HTML instead of Markdown');
-        // 尝试提取 HTML 中的纯文本
         const tempDiv = document.createElement('div');
         tempDiv.innerHTML = content;
         const textContent = tempDiv.textContent || tempDiv.innerText || '';
         await navigator.clipboard.writeText(textContent);
       } else {
-        // 正常的 Markdown 内容
         cache.set(markdownUrl, content);
         await navigator.clipboard.writeText(content);
       }

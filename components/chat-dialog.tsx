@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useChat } from '@ai-sdk/react';
 import { Bot, X, Send } from 'lucide-react';
-import { MessageRenderer } from './message-renderer';
+import { MessageRenderer } from './chat-message-renderer';
 
 interface ChatDialogProps {
   isOpen: boolean;

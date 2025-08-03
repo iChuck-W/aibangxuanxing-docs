@@ -1,0 +1,213 @@
+/**
+ * MDX Components Styles
+ */
+
+/* Large Tabs - Responsive Design */
+.large-tabs {
+  width: 100%;
+  max-width: 100%;
+}
+
+.large-tabs [role='tablist'] {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.large-tabs [role='tablist'] button {
+  font-size: 1.2rem;
+  font-weight: 600;
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center !important;
+  justify-content: center !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* More specific selector for tab centering */
+.large-tabs [role='tablist'] button[role='tab'] {
+  text-align: center !important;
+  justify-content: center !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Even more specific for Fumadocs override */
+.large-tabs div[role='tablist'] button[role='tab'] {
+  text-align: center !important;
+  justify-content: center !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Responsive breakpoints for tab layout */
+@media (max-width: 768px) {
+  .large-tabs [role='tablist'] button {
+    font-size: 1rem;
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .large-tabs [role='tablist'] {
+    flex-direction: column;
+  }
+
+  .large-tabs [role='tablist'] button {
+    flex: none;
+    width: 100%;
+    text-align: center !important;
+    font-size: 0.9rem;
+  }
+}
+
+/* Product Showcase Styles */
+.product-showcase {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.product-features-content {
+  line-height: 1.6;
+}
+
+.product-features-content h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.product-features-content ul {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+.product-features-content li {
+  margin-bottom: 8px;
+}
+
+/* Collapsible Content Styles */
+.collapse-button {
+  background: none;
+  border: none;
+  color: #0066cc;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px 0;
+  text-decoration: none;
+  transition: text-decoration 0.2s ease;
+}
+
+.collapse-button:hover {
+  text-decoration: underline;
+}
+
+.collapse-gradient {
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    var(--color-fd-background, #f8f9fa) 30%,
+    var(--color-fd-background, #f8f9fa) 70%
+  );
+  margin-top: -20px;
+  position: relative;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+/**
+ * Media Carousel Component Styles
+ */
+.mediaCarousel {
+  width: 100%;
+}
+
+.mainImageContainer {
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: var(--color-fd-background, #f5f5f5);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.mainVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
+.thumbnailContainer {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.thumbnailItem {
+  height: 70px;
+  position: relative;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+  border-radius: 5px;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.thumbnailItem:hover {
+  opacity: 0.9;
+}
+.activeThumbnail {
+  opacity: 1;
+  border: 2px solid var(--color-fd-primary, #0070f3);
+}
+
+.thumbnailImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 3px;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+}
+
+.videoThumbnail {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-fd-foreground-muted, #000);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
