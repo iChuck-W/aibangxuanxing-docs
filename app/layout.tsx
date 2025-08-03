@@ -12,7 +12,8 @@ const inter = Inter({
 const siteConfig = {
   name: '工业品智能专家',
   title: '产品文档 | 工业品智能专家',
-  description: '工业品智能专家以品牌官网为知识库做检索，提供专业的产品选型指导和技术支持',
+  description:
+    '工业品智能专家以品牌官网为知识库做检索，提供专业的产品选型指导和技术支持',
   url: 'https://docs.aibangxuanxing.com',
   ogImage: '/favicon.svg',
   keywords: ['工业品', '智能选型', 'AI助手', '产品文档', '技术支持'],
